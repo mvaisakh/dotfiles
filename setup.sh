@@ -42,8 +42,8 @@ case $release in
 esac
 
 backup_list=(.profile .vimrc .Xresources .zshrc)
-symlink_list=(.config/git .config/zsh .fonts/MesloLGS-NF .local/bin .profile .vimrc .Xresources .zprofile)
-dir_list=(.fonts .config .cache/zsh Pictures/Screenshots)
+symlink_list=(.config/git .config/zsh .fonts/MesloLGS-NF .local/bin .local/share/dwm .profile .vimrc .Xresources .zprofile)
+dir_list=(.fonts .config .cache/zsh .local/share Pictures/Screenshots)
 
 if [ "$zsh" = "y" ]; then
 	symlink_list+=" .zshrc"
