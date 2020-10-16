@@ -12,7 +12,7 @@ read zsh
 case $release in 
 	"Arch Linux"|"Artix Linux"|"Manjaro Linux")
 
-		packages="adwaita-icon-theme bdf-unifont feh gnome-themes-extra i3-gaps lxappearance noto-fonts otf-font-awesome papirus-icon-theme picom playerctl pulseaudio rofi rxvt-unicode scrot urxvt-perls xorg-xbacklight"
+		packages="adwaita-icon-theme feh gnome-themes-extra lxappearance otf-font-awesome papirus-icon-theme picom playerctl pulseaudio rxvt-unicode scrot urxvt-perls xorg-xbacklight"
 
 		[ ! "$zsh" = "y" ] || packages+=" zsh zsh-theme-powerlevel10k"
 
@@ -20,7 +20,7 @@ case $release in
 		sudo pacman -S $packages
 
 		echo -e "\n$($cyan)// Installing AUR packages$($reset)\n"
-		aur_packages="polybar ttf-comfortaa termsyn-font urxvt-resize-font-git"
+		aur_packages="urxvt-resize-font-git"
 		aur_dependencies="base-devel git"
 
 		echo -e "\n$($cyan)Installing dependencies for building $($yellow) AUR packages $($reset)\n"
@@ -42,7 +42,7 @@ case $release in
 esac
 
 backup_list=(.profile .vimrc .Xresources .zshrc)
-symlink_list=(.config/i3 .config/git .config/polybar .config/rofi .config/zsh .fonts/Material-Icons .fonts/MesloLGS-NF .local/bin .profile .vimrc .Xresources .zprofile)
+symlink_list=(.config/git .config/zsh .fonts/MesloLGS-NF .local/bin .profile .vimrc .Xresources .zprofile)
 dir_list=(.fonts .config .cache/zsh Pictures/Screenshots)
 
 if [ "$zsh" = "y" ]; then
