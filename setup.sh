@@ -41,9 +41,9 @@ case $release in
 	;;
 esac
 
-backup_list=(.p10k.zsh .profile .vimrc .Xresources .zshrc)
-symlink_list=(.config/i3 .config/git .config/polybar .config/rofi .fonts/Material-Icons .fonts/MesloLGS-NF .local/bin .p10k.zsh .vimrc .Xresources .zprofile)
-dir_list=(.fonts .config Pictures/Screenshots)
+backup_list=(.profile .vimrc .Xresources .zshrc)
+symlink_list=(.config/i3 .config/git .config/polybar .config/rofi .config/zsh .fonts/Material-Icons .fonts/MesloLGS-NF .local/bin .profile .vimrc .Xresources .zprofile)
+dir_list=(.fonts .config .cache/zsh Pictures/Screenshots)
 
 if [ "$zsh" = "y" ]; then
 	symlink_list+=" .zshrc"

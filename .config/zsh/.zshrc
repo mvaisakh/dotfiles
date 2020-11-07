@@ -3,7 +3,7 @@ autoload -U compinit; compinit
 setopt autocd
 
 # enable history and set related options
-HISTFILE="$HOME/.zsh_history"
+HISTFILE="$HOME/.cache/zsh/history"
 HISTSIZE=50000
 SAVEHIST=10000
 setopt hist_expire_dups_first    # delete duplicates first when HISTFILE size exceeds HISTSIZE
@@ -72,4 +72,4 @@ fi
 [ ! -f /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme ] || source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
 # powerlevel10k configs | To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[ ! -f ~/.p10k.zsh ] || source ~/.p10k.zsh
+[ ! -f ~/.config/zsh/p10k.zsh ] || source ~/.config/zsh/p10k.zsh
