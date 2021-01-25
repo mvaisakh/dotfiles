@@ -1,3 +1,3 @@
 killall -q dwmblocks
-dwmblocks &
+setsid dwmblocks &
 feh --bg-scale ~/.local/share/dwm/wallpaper.jpg &
