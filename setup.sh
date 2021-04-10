@@ -6,8 +6,11 @@ reset='tput sgr0'
 
 release=$(sed -rn 's/^NAME="([^"]*)"/\1/p' /etc/os-release)
 
-echo -e "\n$($cyan)// Switch to $($yellow)zsh $($cyan)+ $($yellow)zsh-theme-powerlevel10k-git $($cyan)? [y/n]$($reset)?"
+echo -e "\n$($cyan)// Switch to $($yellow)zsh $($cyan)+ $($yellow)zsh-theme-powerlevel10k-git$($cyan) [y/n]$($reset)?"
 read -r zsh
+
+echo -e "\n$($cyan)// Install $($yellow)yay$($cyan) as AUR helper$($cyan) [y/n]$($reset)?"
+read -r yay
 
 case $release in
 	"Arch Linux" | "Artix Linux" | "Manjaro Linux")
@@ -20,8 +23,11 @@ case $release in
 		sudo pacman -S $packages
 
 		echo -e "\n$($cyan)// Installing AUR packages$($reset)\n"
-		aur_packages="urxvt-resize-font-git ttf-meslo"
+
 		aur_dependencies="base-devel git"
+		aur_packages="urxvt-resize-font-git ttf-meslo"
+
+		[ ! "$yay" = "y" ] || aur_packages+=" yay"
 
 		echo -e "\n$($cyan)Installing dependencies for building $($yellow) AUR packages $($reset)\n"
 		sudo pacman -S $aur_dependencies
@@ -76,7 +82,7 @@ printf "blacklist pcspkr\nblacklist snd_pcsp" | sudo tee /etc/modprobe.d/nobeep.
         Driver "libinput"
     # Enable left mouse button by tapping
     Option "Tapping" "on"
-EndSection' > /etc/X11/xorg.conf.d/40-libinput.conf
+EndSection' >/etc/X11/xorg.conf.d/40-libinput.conf
 
 # backup some specified files
 rm -rf ~/dotfiles/.backup
