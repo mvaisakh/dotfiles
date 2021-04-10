@@ -4,8 +4,8 @@ setopt autocd
 
 # enable history and set related options
 HISTFILE="$HOME/.cache/zsh/history"
-HISTSIZE=50000
-SAVEHIST=10000
+HISTSIZE=10000000
+SAVEHIST=$HISTSIZE
 setopt hist_expire_dups_first    # delete duplicates first when HISTFILE size exceeds HISTSIZE
 setopt hist_ignore_dups          # ignore duplicated commands history list
 setopt hist_ignore_space         # ignore commands that start with space
