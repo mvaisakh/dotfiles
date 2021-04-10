@@ -10,45 +10,48 @@ echo -e "\n$($cyan)// Switch to $($yellow)zsh $($cyan)+ $($yellow)zsh-theme-powe
 read -r zsh
 
 case $release in
-"Arch Linux" | "Artix Linux" | "Manjaro Linux")
+	"Arch Linux" | "Artix Linux" | "Manjaro Linux")
 
 		packages="adwaita-icon-theme feh gnome-themes-extra lxappearance otf-font-awesome papirus-icon-theme picom playerctl pulseaudio rxvt-unicode scrot urxvt-perls xorg-xbacklight dmenu"
 
-	[ ! "$zsh" = "y" ] || packages+=" zsh zsh-theme-powerlevel10k"
+		[ ! "$zsh" = "y" ] || packages+=" zsh zsh-theme-powerlevel10k"
 
-	echo -e "\n$($cyan)// Installing required packages$($reset)\n"
-	sudo pacman -S $packages
+		echo -e "\n$($cyan)// Installing required packages$($reset)\n"
+		sudo pacman -S $packages
 
-	echo -e "\n$($cyan)// Installing AUR packages$($reset)\n"
-	aur_packages="urxvt-resize-font-git ttf-meslo"
-	aur_dependencies="base-devel git"
+		echo -e "\n$($cyan)// Installing AUR packages$($reset)\n"
+		aur_packages="urxvt-resize-font-git ttf-meslo"
+		aur_dependencies="base-devel git"
 
-	echo -e "\n$($cyan)Installing dependencies for building $($yellow) AUR packages $($reset)\n"
-	sudo pacman -S $aur_dependencies
+		echo -e "\n$($cyan)Installing dependencies for building $($yellow) AUR packages $($reset)\n"
+		sudo pacman -S $aur_dependencies
 
-	echo -e "\n$($cyan)// Cloning & Building $($yellow)AUR packages$($reset)\n"
-	for aur_package in $aur_packages; do
-		echo -e "\n$($yellow)$aur_package$($reset)\n"
-		git clone https://aur.archlinux.org/"$aur_package" .build
-		cd .build && makepkg -si
-		cd ../
-		rm -rf .build
-	done
+		echo -e "\n$($cyan)// Cloning & Building $($yellow)AUR packages$($reset)\n"
+		for aur_package in $aur_packages; do
+			echo -e "\n$($yellow)$aur_package$($reset)\n"
+			git clone https://aur.archlinux.org/"$aur_package" .build
+			cd .build && makepkg -si
+			cd ../
+			rm -rf .build
+		done
 
-	git_packages="dwm dwmblocks"
+		git_packages="dwm dwmblocks"
 
-	echo -e "\n$($cyan)// Cloning & Building $($yellow)git packages$($reset)\n"
-	for git_package in $git_packages; do
-		echo -e "\n$($yellow)$git_package$($reset)\n"
-		rm -rf ~/.local/src/"$git_package"
-		git clone https://github.com/merothh/"$git_package" ~/.local/src/"$git_package"
-		pushd ~/.local/src/"$git_package" 1>/dev/null && sudo make install
-		popd 1>/dev/null || ( echo "popd: failed"; exit)
-	done
-	;;
-*)
-	echo -e "\n$($cyan)// woops. you're probably not running an $($yellow)Arch $($cyan)based distro$($reset)\n"
-	;;
+		echo -e "\n$($cyan)// Cloning & Building $($yellow)git packages$($reset)\n"
+		for git_package in $git_packages; do
+			echo -e "\n$($yellow)$git_package$($reset)\n"
+			rm -rf ~/.local/src/"$git_package"
+			git clone https://github.com/merothh/"$git_package" ~/.local/src/"$git_package"
+			pushd ~/.local/src/"$git_package" 1>/dev/null && sudo make install
+			popd 1>/dev/null || (
+				echo "popd: failed"
+				exit
+			)
+		done
+		;;
+	*)
+		echo -e "\n$($cyan)// woops. you're probably not running an $($yellow)Arch $($cyan)based distro$($reset)\n"
+		;;
 esac
 
 backup_list=(.vimrc .Xresources .zshenv .zshrc)
