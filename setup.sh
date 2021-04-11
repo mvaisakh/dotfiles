@@ -27,7 +27,7 @@ case $release in
 		aur_dependencies="base-devel git"
 		aur_packages="urxvt-resize-font-git ttf-meslo"
 
-		[ ! "$yay" = "y" ] || aur_packages+=" yay"
+		[ ! "$yay" = "y" ] || aur_packages+=" yay-bin"
 
 		echo -e "\n$($cyan)Installing dependencies for building $($yellow) AUR packages $($reset)\n"
 		sudo pacman -S $aur_dependencies
