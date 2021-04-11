@@ -47,7 +47,7 @@ case $release in
 		for git_package in $git_packages; do
 			echo -e "\n$($yellow)$git_package$($reset)\n"
 			rm -rf ~/.local/src/"$git_package"
-			git clone https://github.com/merothh/"$git_package" ~/.local/src/"$git_package"
+			git clone https://git.keksla.wtf/dj/"$git_package" ~/.local/src/"$git_package"
 			pushd ~/.local/src/"$git_package" 1>/dev/null && sudo make install
 			popd 1>/dev/null || (
 				echo "popd: failed"
