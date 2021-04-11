@@ -48,6 +48,7 @@
 	su = submodule update --init --recursive
 	ss = show --stat
 	suicide = reset --hard
+	unstage = restore --staged
 [merge]
 	log = true
 [gc]
