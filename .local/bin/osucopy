@@ -1,4 +1,4 @@
 #!/bin/bash
 
-# Copy all the beatmaps in Downloads folder but dont overwrite any 
+# Copy all the beatmaps in Downloads folder but dont overwrite any
 mv -nv ~/Downloads/*.osz ~/Games/osu/drive_c/osu/Songs
