@@ -102,7 +102,7 @@ for dir in ${dir_list[*]}; do
 done
 
 # create empty config files for programs
-touch .config/wget/wgetrc
+touch ~/.config/wget/wgetrc
 
 # go ahead and symlink everything
 for file in ${symlink_list[*]}; do
