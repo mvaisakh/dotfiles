@@ -1,1 +1,1 @@
-scrot ~/Pictures/Screenshots/Screenshot-%Y-%m-%d-%H-%M-%S.png && paplay ~/.local/share/dwm/camera-shutter.oga
+scrot ~/Pictures/Screenshots/Screenshot-%Y-%m-%d-%H-%M-%S.png -e 'xclip -selection clipboard -target image/png -i $f' && paplay ~/.local/share/dwm/camera-shutter.oga
