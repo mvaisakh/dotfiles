@@ -62,7 +62,7 @@ esac
 
 backup_list=(.vimrc .Xresources .zshenv .zshrc)
 symlink_list=(.config/git .config/zsh .local/bin .local/share/dwm .local/share/fonts .profile .vimrc .Xresources .zshenv)
-dir_list=(.config .cache/zsh .local/share Pictures/Screenshots)
+dir_list=(.config .config/wget/  .cache/zsh .local/share Pictures/Screenshots)
 
 if [ "$zsh" = "y" ]; then
 	symlink_list+=(" .zshrc")
@@ -100,6 +100,9 @@ done
 for dir in ${dir_list[*]}; do
 	mkdir -p ~/"$dir"
 done
+
+# create empty config files for programs
+touch .config/wget/wgetrc
 
 # go ahead and symlink everything
 for file in ${symlink_list[*]}; do
