@@ -1,0 +1,3 @@
+#!/bin/sh
+[[ -f ~/.zshenv ]] &&  source ~/.zshenv
+[[ -f ~/.config/zsh/.zshenv ]] && source ~/.config/zsh/.zshenv
