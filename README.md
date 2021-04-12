@@ -21,7 +21,7 @@ pull``
 Screenshot
 -----------
 
-![Screenshot 1](https://i.imgur.com/wCgwxgV.png)
+![Screenshot 1](https://i.imgur.com/SsO72l9.png)
 
 Credits
 --------
