@@ -15,7 +15,7 @@ read -r yay
 case $release in
 	"Arch Linux" | "Artix Linux" | "Manjaro Linux")
 
-		packages="adwaita-icon-theme feh gnome-themes-extra lxappearance otf-font-awesome papirus-icon-theme picom playerctl pulseaudio rxvt-unicode scrot urxvt-perls xorg-xbacklight dmenu xclip ranger"
+		packages="adwaita-icon-theme feh gnome-themes-extra lxappearance otf-font-awesome papirus-icon-theme playerctl pulseaudio rxvt-unicode scrot urxvt-perls xorg-xbacklight dmenu xclip ranger"
 
 		[ ! "$zsh" = "y" ] || packages+=" zsh zsh-theme-powerlevel10k"
 
@@ -25,7 +25,7 @@ case $release in
 		echo -e "\n$($cyan)// Installing AUR packages$($reset)\n"
 
 		aur_dependencies="base-devel git"
-		aur_packages="urxvt-resize-font-git ttf-meslo"
+		aur_packages="picom-ibhagwan-git urxvt-resize-font-git ttf-meslo"
 
 		[ ! "$yay" = "y" ] || aur_packages+=" yay-bin"
 
