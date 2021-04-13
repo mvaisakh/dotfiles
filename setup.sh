@@ -61,7 +61,7 @@ case $release in
 esac
 
 backup_list=(.vimrc .xprofile .Xresources .zshenv .zshrc)
-symlink_list=(.config/git .config/ranger .config/zsh .local/bin .local/share/dwm .local/share/fonts .profile .vimrc .xprofile .Xresources .zshenv)
+symlink_list=(.config/git .config/picom .config/ranger .config/zsh .local/bin .local/share/dwm .local/share/fonts .profile .vimrc .xprofile .Xresources .zshenv)
 dir_list=(.config .config/wget/ .cache/zsh .local/share Pictures/Screenshots)
 
 if [ "$zsh" = "y" ]; then
