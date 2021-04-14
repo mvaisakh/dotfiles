@@ -25,7 +25,7 @@ case $release in
 		echo -e "\n$($cyan)// Installing AUR packages$($reset)\n"
 
 		aur_dependencies="base-devel git"
-		aur_packages="picom-ibhagwan-git urxvt-resize-font-git ttf-meslo"
+		aur_packages="picom-ibhagwan-git ueberzug urxvt-resize-font-git ttf-meslo"
 
 		[ ! "$yay" = "y" ] || aur_packages+=" yay-bin"
 
