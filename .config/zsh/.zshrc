@@ -1,6 +1,7 @@
 # enable autocomplete and set related options
 autoload -U compinit; compinit
 setopt autocd
+setopt prompt_subst
 
 # enable history and set related options
 HISTFILE="$HOME/.cache/zsh/history"
@@ -69,7 +70,8 @@ fi
 [ ! $TILIX_ID ] || source /etc/profile.d/vte.sh
 
 # source powerlevel10k zsh theme
-[ ! -f /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme ] || source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+[ ! -f /home/mvaisakh/.oh-my-zsh/themes/agnoster.zsh-theme ] || source /home/mvaisakh/.oh-my-zsh/themes/agnoster.zsh-theme
 
 # powerlevel10k configs | To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[ ! -f ~/.config/zsh/p10k.zsh ] || source ~/.config/zsh/p10k.zsh
+#[ ! -f ~/.config/zsh/p10k.zsh ] || source ~/.config/zsh/p10k.zsh
+[ ! -f /home/mvaisakh/.oh-my-zsh/oh-my-zsh.sh ] || source /home/mvaisakh/.oh-my-zsh/oh-my-zsh.sh
