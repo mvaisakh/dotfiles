@@ -1,8 +1,8 @@
 [core]
-	editor = vim
+	editor = nano
 [user]
-	name = Daniel Jacob Chittoor
-	email = djchittoor47@gmail.com
+	name = Vaisakh Murali
+	email = mvaisakh@statixos.com
 [pull]
 	rebase = true
 [push]
