@@ -6,7 +6,7 @@ reset='tput sgr0'
 
 release=$(sed -rn 's/^NAME="([^"]*)"/\1/p' /etc/os-release)
 
-echo -e "\n$($cyan)// Switch to $($yellow)zsh $($cyan)+ $($yellow)zsh-theme-powerlevel10k-git$($cyan) [y/n]$($reset)?"
+echo -e "\n$($cyan)// Switch to $($yellow)zsh $($cyan)+ $($yellow)agnoster-theme$($cyan) [y/n]$($reset)?"
 read -r zsh
 
 echo -e "\n$($cyan)// Install $($yellow)yay$($cyan) as AUR helper$($cyan) [y/n]$($reset)?"
@@ -17,7 +17,7 @@ case $release in
 
 		packages="adwaita-icon-theme dmenu feh gnome-themes-extra lxappearance otf-font-awesome papirus-icon-theme playerctl pamixer ponymix pulseaudio ranger rxvt-unicode scrot ueberzug urxvt-perls xclip acpilight"
 
-		[ ! "$zsh" = "y" ] || packages+=" zsh zsh-theme-powerlevel10k"
+		[ ! "$zsh" = "y" ] || packages+=" zsh "
 
 		echo -e "\n$($cyan)// Installing required packages$($reset)\n"
 		sudo pacman -S $packages
@@ -41,13 +41,13 @@ case $release in
 			rm -rf .build
 		done
 
-		git_packages="dwm dwmblocks st"
+		git_packages="dwm dwmblocks"
 
 		echo -e "\n$($cyan)// Cloning & Building $($yellow)git packages$($reset)\n"
 		for git_package in $git_packages; do
 			echo -e "\n$($yellow)$git_package$($reset)\n"
 			rm -rf ~/.local/src/"$git_package"
-			git clone https://git.keksla.wtf/dj/"$git_package" ~/.local/src/"$git_package"
+			git clone https://github.com/mvaisakh/"$git_package" ~/.local/src/"$git_package"
 			pushd ~/.local/src/"$git_package" 1>/dev/null && sudo make install
 			popd 1>/dev/null || (
 				echo "popd: failed"
