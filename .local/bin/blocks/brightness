@@ -1,4 +1,4 @@
 GLYPH=
-PERCENT=$(xbacklight)
+PERCENT=$(xbacklight -get)
 
 printf "%s %.f%s" "$GLYPH" "${PERCENT}" "%"
