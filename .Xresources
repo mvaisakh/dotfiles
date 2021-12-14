@@ -3,41 +3,42 @@
 !!!!!!!!!!!!!!!!!!!!!!
 
 ! special
-*.foreground:   #b5d1da
-*.background:   #0b0f10
-*.cursorColor:  #b5d1da
+*.foreground:   #c8d2e4
+*.background:   #070b11
+*.cursorColor:  #c8d2e4
 
 ! black
-*.color0:       #13181a
-*.color8:       #72afc0
+*.color0:       #0e141c
+*.color8:       #e16775
 
 ! red
-*.color1:       #1b2123
-*.color9:       #d898ba
+*.color1:       #161d27
+*.color9:       #b09c67
 
 ! green
-*.color2:       #2b3336
-*.color10:      #ea97c4
+*.color2:       #252e3c
+*.color10:      #5984b7
 
 ! yellow
-*.color3:       #3f4b4f
-*.color11:      #dd67ad
+*.color3:       #39475a
+*.color11:      #479744
 
 ! blue
-*.color4:       #5a696e
-*.color12:      #ac9ed4
+*.color4:       #526580
+*.color12:      #907d47
 
 ! magenta
-*.color5:       #798e94
-*.color13:      #df99bf
+*.color5:       #718aad
+*.color13:      #da70db
 
 ! cyan
-*.color6:       #9eb8c0
-*.color14:      #8f9869
+*.color6:       #a1b4d1
+*.color14:      #b755b9
 
 ! white
-*.color7:       #d6e5ea
-*.color15:      #86914d
+*.color7:       #dde3ee
+*.color15:      #a08947
+
 
 !!!!!!!!!!!
 !! URxvt !!
@@ -54,7 +55,7 @@ URxvt.scrollBar: false
 
 !Transparency
 URxvt.depth: 32
-URxvt.background: [75]#000000
+URxvt.background: [30]#000000
 
 !Larger history limit
 urxvt.saveLines: 999999
