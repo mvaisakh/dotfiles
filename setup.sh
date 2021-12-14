@@ -15,7 +15,7 @@ read -r yay
 case $release in
 	"Arch Linux" | "Artix Linux" | "Manjaro Linux")
 
-		packages="adwaita-icon-theme dmenu feh gnome-themes-extra lxappearance otf-font-awesome papirus-icon-theme playerctl pamixer pulseaudio ranger rxvt-unicode scrot ueberzug urxvt-perls xclip acpilight feh"
+		packages="adwaita-icon-theme feh gnome-themes-extra lxappearance otf-font-awesome papirus-icon-theme playerctl pamixer pulseaudio ranger rxvt-unicode scrot ueberzug urxvt-perls xclip acpilight feh"
 
 		[ ! "$zsh" = "y" ] || packages+=" zsh "
 
@@ -41,7 +41,7 @@ case $release in
 			rm -rf .build
 		done
 
-		git_packages="dwm dwmblocks"
+		git_packages="dwm dwmblocks dmenu"
 
 		echo -e "\n$($cyan)// Cloning & Building $($yellow)git packages$($reset)\n"
 		for git_package in $git_packages; do
@@ -60,12 +60,11 @@ case $release in
 		;;
 esac
 
-backup_list=(.vimrc .xprofile .Xresources .zshenv .zshrc)
-symlink_list=(.config/picom .config/ranger .config/zsh .local/bin .local/share/dwm .local/share/fonts .profile .vimrc .xprofile .Xresources .zshenv)
-dir_list=(.config .config/wget/ .cache/zsh .local/share Pictures/Screenshots)
+backup_list=(.vimrc .xprofile .Xresources)
+symlink_list=(.config/picom .config/ranger .local/bin .local/share/dwm .local/share/fonts .profile .vimrc .xprofile .Xresources)
+dir_list=(.config .config/wget/ .local/share Pictures/Screenshots)
 
 if [ "$zsh" = "y" ]; then
-	symlink_list+=(" .zshrc")
 	echo -e "\n$($cyan)// Changing default shell to $($yellow)zsh$($reset)\n"
 	chsh -s "$(which zsh)"
 fi
@@ -83,6 +82,9 @@ printf "blacklist pcspkr\nblacklist snd_pcsp" | sudo tee /etc/modprobe.d/nobeep.
     # Enable left mouse button by tapping
     Option "Tapping" "on"
 EndSection' | sudo tee /etc/X11/xorg.conf.d/40-libinput.conf 1>/dev/null
+
+# Backlight chown
+sudo chown $USER /sys/class/backlight/amdgpu_bl0/brightness
 
 # backup some specified files
 rm -rf ~/dotfiles/.backup
