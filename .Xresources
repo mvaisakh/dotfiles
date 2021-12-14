@@ -2,42 +2,42 @@
 !! Colors and stuff !!
 !!!!!!!!!!!!!!!!!!!!!!
 
+! special
+*.foreground:   #b5d1da
+*.background:   #0b0f10
+*.cursorColor:  #b5d1da
+
 ! black
-*color0:   #2E3436
-*color8:   #555753
+*.color0:       #13181a
+*.color8:       #72afc0
 
 ! red
-*color1:   #CC0000
-*color9:   #EF2929
+*.color1:       #1b2123
+*.color9:       #d898ba
 
 ! green
-*color2:   #4E9A06
-*color10:  #8AE234
+*.color2:       #2b3336
+*.color10:      #ea97c4
 
-! orange
-*color3:   #C4A000
-*color11:  #FCE94F
+! yellow
+*.color3:       #3f4b4f
+*.color11:      #dd67ad
 
 ! blue
-*color4:   #3465A4
-*color12:  #729FCF
+*.color4:       #5a696e
+*.color12:      #ac9ed4
 
-! purple
-*color5:   #75507B
-*color13:  #AD7FA8
+! magenta
+*.color5:       #798e94
+*.color13:      #df99bf
 
-! turquoise
-*color6:   #06989A
-*color14:  #34E2E2
+! cyan
+*.color6:       #9eb8c0
+*.color14:      #8f9869
 
-! grey
-*color7:   #D3D7CF
-*color15:  #EEEEEC
-
-! special
-*.foreground:   #D3D7CF
-*.background:   #2E3436
-*.cursorColor:  #D3D7CF
+! white
+*.color7:       #d6e5ea
+*.color15:      #86914d
 
 !!!!!!!!!!!
 !! URxvt !!
