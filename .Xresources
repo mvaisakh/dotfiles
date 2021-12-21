@@ -3,42 +3,41 @@
 !!!!!!!!!!!!!!!!!!!!!!
 
 ! special
-*.foreground:   #c8d2e4
-*.background:   #070b11
-*.cursorColor:  #c8d2e4
+*.foreground:   #c5c8c6
+*.background:   #1d1f21
+*.cursorColor:  #c5c8c6
 
 ! black
-*.color0:       #0e141c
-*.color8:       #e16775
+*.color0:       #282a2e
+*.color8:       #373b41
 
 ! red
-*.color1:       #161d27
-*.color9:       #b09c67
+*.color1:       #a54242
+*.color9:       #cc6666
 
 ! green
-*.color2:       #252e3c
-*.color10:      #5984b7
+*.color2:       #8c9440
+*.color10:      #b5bd68
 
 ! yellow
-*.color3:       #39475a
-*.color11:      #479744
+*.color3:       #de935f
+*.color11:      #f0c674
 
 ! blue
-*.color4:       #526580
-*.color12:      #907d47
+*.color4:       #5f819d
+*.color12:      #81a2be
 
 ! magenta
-*.color5:       #718aad
-*.color13:      #da70db
+*.color5:       #85678f
+*.color13:      #b294bb
 
 ! cyan
-*.color6:       #a1b4d1
-*.color14:      #b755b9
+*.color6:       #5e8d87
+*.color14:      #8abeb7
 
 ! white
-*.color7:       #dde3ee
-*.color15:      #a08947
-
+*.color7:       #707880
+*.color15:      #c5c8c6
 
 !!!!!!!!!!!
 !! URxvt !!
