@@ -21,4 +21,4 @@ pull``
 Screenshot
 -----------
 
-![Screenshot 1](https://i.imgur.com/oXLsdXP.png)
+![Screenshot 1](https://raw.githubusercontent.com/mvaisakh/dotfiles/RyzenBook/.asset/Screenshot-2021-12-19-11-23-15.png)
